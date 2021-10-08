@@ -1,0 +1,6 @@
+authors = ["a-poor <a-poor@users.noreply.github.com>"]
+name = "JuCLI"
+uuid = "0c323078-288a-11ec-09e2-3fbe681e6e0d"
+version = "0.1.0"
+
+[deps]
