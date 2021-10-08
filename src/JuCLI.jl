@@ -1,12 +1,18 @@
 module JuCLI
 
-export greeting
-
-greeting() = "Hello World!"
+export CLI, ActionContext, Flag
 
 
-struct Flag
+struct Flag{T}
+    name::String
+    usage::String
+    optional::Bool
+    default::Union{T,Nothing}
+end
 
+struct ActionContext
+    args::Vector{String}
+    flags::Vector{Flag}
 end
 
 struct CLI 
@@ -14,8 +20,14 @@ struct CLI
     usage::String
     flags::Vector{Flag}
     action::Function
-end
 
+    CLI(
+        name="cli", 
+        usage="", 
+        flags=Vector{Flag}(), 
+        action=() -> nothing
+    ) = new(name, usage, flags, action)
+end
 
 
 
