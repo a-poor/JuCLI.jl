@@ -1,0 +1,5 @@
+#!/usr/bin/julia
+
+@show PROGRAM_FILE
+@show ARGS
+

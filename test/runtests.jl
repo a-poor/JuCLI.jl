@@ -8,4 +8,6 @@ cli = CLI("mycli")
 @test cli.name == "mycli"
 @test CLI().name == "cli"
 
+
+
 end # JuCLI
